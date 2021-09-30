@@ -1,0 +1,84 @@
+.:
+итого 4
+drw-rw-r--. 2 chelalex chelalex 22 сен 30 12:45 dir
+----r-----. 1 root     chelalex  5 сен 30 12:39 file
+-rw-------. 1 chelalex chelalex  0 сен 30 12:54 file1
+-rw-rw-rw-. 1 chelalex chelalex  0 сен 30 12:54 file2
+
+./dir:
+ls: невозможно получить доступ к './dir/new_file': Отказано в доступе
+итого 0
+-????????? ? ? ? ?            ? new_file
+
+    1  mkdir test
+    2  cd test
+    3  man chmod
+    4  man touch
+    5  man chown
+    6  man chgrp
+    7  man umask
+    8  man touch
+    9  cat>file
+   10  touch file
+   11  ls
+   12  ls -l file
+   13  chmod 000 file
+   14  ls -l file
+   15  echo "test" > file
+   16  cat file
+   17  chmod 100 file
+   18  ls -l file
+   19  chmod 200 file
+   20  ls -l file
+   21  ll file
+   22  echo "test" > file
+   23  cat file
+   24  chmod 240 file
+   25  ll file
+   26  cat file
+   27  chmod 340 file
+   28  ls -l file
+   29  chmod 640 file
+   30  ls -l file
+   31  cat file
+   32  mkdir dir
+   33  cat>dir/new_file
+   34  rm dir/new_file
+   35  cat>dir/new_file
+   36  rm dir/new_file
+   37  cat>dir/new_file
+   38  ls /dir
+   39  cd dir
+   40  ls
+   41  cd ..
+   42  ls dir
+   43  ls -l dir
+   44  ll dir
+   45  cat new_file
+   46  cat dir/new_file
+   47  chmod 666 dir
+   48  ll dir
+   49  ls dir
+   50  cat dir/new_file
+   51  man chown
+   52  man chgrp
+   53  chown root file
+   54  chgrp root file
+   55  umask 177
+   56  touch file1
+   57  ll file1
+   58  umask 111
+   59  touch file2
+   60  ll file2
+   61  cat file
+   62  ll file
+   63  cat file
+   64  ls -lR
+   65  ls -lR | history > ~/lab2_history.txt
+   66  cd ..
+   67  cat lab2_history.txt
+   68  chmod 664 dir
+   69  cd test
+   70  chmod 664 dir
+   71  cd
+   72  ls -lR | history > ~/lab2_history.txt
