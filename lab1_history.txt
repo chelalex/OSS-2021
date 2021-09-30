@@ -1,0 +1,204 @@
+    1  whereis guest
+    2  grep guest
+    3  clear
+    4  whoami
+    5  sudo dnf install epel-release
+    6  su -
+    7  reboot
+    8  rpm -q kernel-devel
+    9  uname -r
+   10  ls
+   11  whoami
+   12  whoaim
+   13  whoami
+   14  echo HelloWorld
+   15  echo Hello World
+   16  echo "Hello World"
+   17  date
+   18  cal
+   19  man cal
+   20  cal -3
+   21  man cal
+   22  history
+   23  clear
+   24  pwd
+   25  cd /
+   26  cd ..
+   27  pwd
+   28  ls
+   29  ls /var
+   30  cd ~
+   31  cd
+   32  cd ..
+   33  ls
+   34  pwd
+   35  ls -l
+   36  ls -la
+   37  mkdir fruits
+   38  cd ~
+   39  mkdir fruits
+   40  cd /
+   41  mkdir ~/animals
+   42  touch /tmp/temp
+   43  cd ~/fruits
+   44  cat> apple
+   45  cat>apple
+   46  ls
+   47  cat>banana
+   48  ls
+   49  cat banana
+   50  cat apple
+   51  rm banana
+   52  cat>banana
+   53  cat>pineapple
+   54  cat>lion
+   55  ls
+   56  cat>~/animals/cat.txt
+   57  cat>~/animals/dog.txt
+   58  cat>~/animals/elephant.txt
+   59  stat apple
+   60  ls b*
+   61  ls --help
+   62  ls *a
+   63  ls
+   64  ls [bi]*
+   65  ls b* i*
+   66  cp /etc/passwd ~
+   67  cat /etc/issue
+   68  cp /etc/issue apple
+   69  cat apple
+   70  mv lion ~/animals
+   71  mv pineapple pineaple
+   72  ls
+   73  mv pineaple pineapple
+   74  ls
+   75  ls ~/animals
+   76  wc --help
+   77  wc /etc/passwd
+   78  wc -l /etc/passwd
+   79  cd ~
+   80  ln -s /etc/passwd passwd_link
+   81  ls
+   82  ln .bash_history history_hard
+   83  ls
+   84  ls -l
+   85  ls -l ~/.bash_history
+   86  ls -l /fruits/apple
+   87  ls -l ~/fruits/apple
+   88  ls -l ~/fruits/pineapple
+   89  ls -l ~/animals/lion
+   90  rm fruits/apple
+   91  mkdir rmme
+   92  ls
+   93  rmdir rmme
+   94  rmdir fruits
+   95  rm -fr fruits
+   96  ls
+   97  cat /etc/passwd
+   98  cat /etc/passwd /var/log/boot.log
+   99  cp /etc/init.d/ ~
+  100  cp -r /etc/init.d/ ~
+  101  rm init.d
+  102  rmdir init.d
+  103  rmdir -fr init.d
+  104  rm -fr init.d
+  105  ls
+  106  man sort
+  107  cut -d: -f1 /etc/passwd | sort -d
+  108  man less
+  109  man column
+  110  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  111  man column
+  112  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  113  cat /etc/passwd
+  114  cut -d: -f1,3 /etc/passwd | column -ts: | less
+  115  cut -d: -f1,3 /etc/passwd | column -ts: | less | sort -d
+  116  grep :/bin/bash /etc/passwd | wc -l
+  117  grep :/bin/bash /etc/passwd | cut -d: f1 | sort -d
+  118  grep :/bin/bash /etc/passwd | cut -d: f1 /etc/passwd | sort -d
+  119  grep :/bin/bash /etc/passwd | column -ts | sort -r
+  120  grep :/bin/bash /etc/passwd | column -ts: | sort -r
+  121  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -d
+  122  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -r
+  123  man tr
+  124  man uniq
+  125  man head
+  126  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n 25
+  127  man sort
+  128  man rpm
+  129  rpm -ql man-db | xargs -l du    2> /dev/null  | sort -n
+  130                  ^ для каждого   ^ игнорировать  ^ сортировать числа
+  131                   файла вызвать      ошибки
+  132                    команду du
+  133  man sort
+  134  top -b -n1 | sort -d
+  135  top -b -n1
+  136  man sort
+  137  top -b -n1 | sort -k12
+  138  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f11,5
+  139               ^ убирает   ^ отделяет  ^ "схлопывает"   ^ в 11 колонке - имя процесса,
+  140                заголовки      PID         пробелы        в 5 колонке - объём памяти
+  141  man tr
+  142  cat /etc/passwd | tr ":" " "
+  143  cut -d: -f1,7 | column ts: | less | sort -k1
+  144  cut -d: -f1,7 | column -ts: | less | sort -k1
+  145  cut -d: -f1,7 | column -ts: | sort -k1
+  146  cut -d: -f1,7 /etc/passwd | column -ts: | less | sort -k1
+  147  man top
+  148  sort -k1 /etc/passwd | tr ":" " "
+  149  cut -d: -f1,7 /etc/passwd | column -ts: | less | sort -k1
+  150  cd /usr/share/doc/git-*
+  151  yum install -y git
+  152  sudo yum install -y git
+  153  su -
+  154  cd /usr/share/doc/git-*
+  155  whereis git
+  156  whereis user-manual.txt
+  157  ls /usr/bin/git
+  158  sudo yum install git
+  159  su -
+  160  git --version
+  161  yum install wget unzip gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel libcurl-devel expat-devel
+  162  su -
+  163  cd /usr/share/doc/git-*
+  164  sudo yum install -y git
+  165  wheris user-manual.txt
+  166  whereis user-manual.txt
+  167  ls
+  168  cd /usr/share
+  169  ls
+  170  ls d*
+  171  ls | grep doc
+  172  cd doc
+  173  ls
+  174  ls | grep dit
+  175  ls | grep git
+  176  cd pit
+  177  cd git
+  178  ls
+  179  ls | user
+  180  ls | grep user
+  181  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  182  man tr
+  183  man grep
+  184  man uniq
+  185  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+  186  man tr
+  187  man fold
+  188  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  189  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+  190  man grep
+  191  ping ya.ru
+  192  curl wttr.in
+  193  hostname -I
+  194  cd ~
+  195  curl ifconfig.me
+  196  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  197  less README-ru.md
+  198  usermod -aG wheel student
+  199  su -
+  200  id
+  201  whoami
+  202  sudo id
+  203  su
+  204  history > lab1_history.txt
