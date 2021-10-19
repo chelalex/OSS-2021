@@ -1,0 +1,28 @@
+    1  man dd
+    2  ls -l /dev/sda{,[123]}
+    3  ls -l /dev/sda{a,[123]}
+    4  ls -l /dev/sda{[123]}
+    5  ls -l /dev/sda{,[123]}
+    6  lsblk --list
+    7  cat /proc/diskstats 
+    8  lsblk --list | cut -f2
+    9  lsblk --list | cut -f1,2
+   10  cat /proc/devices 
+   11  dd if=/dev/zero of=./fs.img bs=1M count=10
+   12  losetup --find --show ./fs.img
+   13  losetup --list
+   14  mkfs -t ext4 /dev/loop0
+   15  losetup --find --show ./fs.img
+   16  blkid /dev/loop0
+   17  mount /dev/loop0 /mnt
+   18  sudo mount /dev/loop0 /mnt
+   19  mount | grep /mnt
+   20  df -h /mnt
+   21  df -hi /mnt
+   22  umount /dev/loop0
+   23  tune2fs -l /dev/loop0
+   24  losetup --detach /dev/loop0
+   25  losetup --list
+   26  ls
+   27  touch ~/Рабочий\ стол/lab6_history.txt
+   28  history > ~/Рабочий\ стол/lab6_history.txt
