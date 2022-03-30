@@ -1,0 +1,42 @@
+ldd /bin/login | grep pam
+  ls -l /lib64/libpam*
+  ls -l /lib64/security/
+  vi /etc/pam.d/system-auth
+  vi /etc/pam.d/su
+   auth sufficient pam_permit.so
+  auth sufficient pam_permit.so
+  su auth sufficient pam_permit.so
+  sudo su auth sufficient pam_permit.so
+  sudo su
+  vi /etc/pam.d/su
+  cat /etc/pam.d/su
+  nano /etc/pam.d/su
+  sudo nano /etc/pam.d/su
+  exit
+  touch script.c
+  gcc script.c -o script -lpam -lpam_misc
+  sudo gcc script.c -o script -lpam -lpam_misc
+  sudo apt-get install gcc
+  yum install gcc-c++
+  sudo yum install gcc-c++
+  gcc script.c -o script -lpam -lpam_misc
+  Shell
+  cd /etc/pam.d/
+  ls
+  nano check
+  sudo nano checkuseradd -G wheel -p password -s /bin/bash pacman
+  nano /etc/pam.d/su
+  nano /etc/pam.d/su
+  cat /etc/securetty
+  touch /etc/securetty
+  nano /etc/pam.d/login
+  nano /etc/pam.d/login
+  man pam_pwquality
+  nano /etc/security/pwquality.conf
+  nano /etc/pam.d/system-auth
+  nano /etc/security/pwquality.conf
+  nano /etc/pam.d/system-auth
+  man pam_limits
+  nano /etc/security/limits.conf
+  sudo passwd pacman
+  history > history.txt
