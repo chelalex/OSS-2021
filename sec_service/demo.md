@@ -72,15 +72,15 @@
 
 1. `gpg --gen-key`
 
-![](/Users/aleksandracelnokova/Desktop/OSS/OSS-2021/sec_service/images/01.jpg)
+![](/OSS/OSS-2021/sec_service/images/01.jpg)
 
-![](/Users/aleksandracelnokova/Desktop/OSS/OSS-2021/sec_service/images/02.jpg)
+![](/OSS/OSS-2021/sec_service/images/02.jpg)
 
 2. `gpg2 --export -a 'chelalex3' > ~/rpmbuild/RPM-GPG-KEY-chelalex3`
 
 3. `vi ~/.rpmmacros`
 
-![](/Users/aleksandracelnokova/Desktop/OSS/OSS-2021/sec_service/images/03.jpg)
+![](/OSS/OSS-2021/sec_service/images/03.jpg)
 
 4. `gpg --export --armor 7A36FC6D > /tmp/gpg-key`
 
@@ -94,23 +94,23 @@
 
 `pstree`
 
-![](/Users/aleksandracelnokova/Desktop/OSS/OSS-2021/sec_service/images/04.PNG)
+![](/OSS-2021/sec_service/images/04.PNG)
 
 4. `ps -eZ | grep ssh-monitoring`
 
 Сервис работает в **собственном** домене.
 
-![](/Users/aleksandracelnokova/Desktop/OSS/OSS-2021/sec_service/images/05.jpg)
+![](OSS/OSS-2021/sec_service/images/05.jpg)
 
 5. `sudo systemctl restart ssh-monitoring`
 
-![](/Users/aleksandracelnokova/Desktop/OSS/OSS-2021/sec_service/images/06.PNG)
+![](/OSS/OSS-2021/sec_service/images/06.PNG)
 
 6. `journalctl -f -u ssh-monitoring`
 
 **Собственный журнал событий**. Ведутся записи о старте сервиса, его остановке, о выполнении основной функции.
 
-![](/Users/aleksandracelnokova/Desktop/OSS/OSS-2021/sec_service/images/07.jpg)
+![](/OSS/OSS-2021/sec_service/images/07.jpg)
 
 **Запуск** сервиса (логирование запуска в `/var/log/messages`)
 
